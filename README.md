@@ -8,4 +8,4 @@ Roles:
 Nourddeen: Middleware
 Blake: Routes
 Brandon: MVC 
-Cameoron: front-end styling/ api build 
+Cameoron: front-end styling/ api 
