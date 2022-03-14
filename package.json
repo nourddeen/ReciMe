@@ -4,17 +4,21 @@
     "connect-mongodb-session": "^3.1.1",
     "dotenv": "^16.0.0",
     "ejs": "^3.1.6",
+    "env": "0.0.2",
     "express": "^4.17.3",
+    "express-session": "^1.17.2",
     "init": "^0.1.2",
     "method-override": "^3.0.0",
-    "mongoose": "^6.2.6"
+    "mongoose": "^6.2.6",
+    "nodemon": "^2.0.15"
   },
   "name": "recime",
-  "description": "",
+  "description": "Have you ever been inspired to cook meals for yourself or others but never knew exactly where to start? Our app ReciMe allows you to publish your very own recipe all while being part of the culinary culture and having the ability to learn from others.",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
