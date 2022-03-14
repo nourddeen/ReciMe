@@ -1,16 +1,22 @@
 // food app info!!
 
+require('dotenv').config()
+console.log(process.env.MONGO_URI)
 const express = require('express');
-const app = express();
+const mongoose = require("mongoose");
+const methodOverride = require('method-override')
 const session = require('express-session');
 const User = require('./models/users');
 const MongoDBStore = require('connect-mongodb-session')(session);
-require('dotenv').config()
-const methodOverride = require('method-override')
-const mongoose = require("mongoose");
-const MONGO_URI = 'mongodb://localhost:27017/' + 'recipes';
-const db = mongoose.connection;
+const app = express();
 
+
+const store = new MongoDBStore({
+    uri: process.env.MONGO_URI,
+    collection: 'mySessions'
+});
+
+require('./db-units/connect')
 
 const recipeController = require('./controllers/recipeController')
 //const usersController = require('./controllers/usersController')
@@ -20,14 +26,15 @@ app.use(require('./middleware/logger'))
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.use(session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    store: store,
+}))
 
 // Connect to Mongo
-mongoose.connect(MONGO_URI);
 
-// Connection Error/Success
-db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
-db.on('connected', () => console.log('mongo connected: ', MONGO_URI));
-db.on('disconnected', () => console.log('mongo disconnected'));
 
 
 // routes are on recipeController.js
