@@ -25,6 +25,8 @@ app.use(require('./middleware/logger'))
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.use(express.static('/public'));
+
 app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
@@ -42,7 +44,6 @@ app.use(async (req, res, next)=>{
     }
     next()
 })
-
 
 app.use('/recipes', recipeController)
 app.use('/users', usersController)
