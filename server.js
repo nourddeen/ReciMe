@@ -25,7 +25,9 @@ app.use(require('./middleware/logger'))
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(express.static('/public'));
+app.use(express.static('public'));
+app.use(`/css`, express.static(__dirname + `public/css`))
+app.use(`/images`, express.static(__dirname + `public/images`))
 
 app.use(session({
     secret: process.env.SESSION_SECRET,
