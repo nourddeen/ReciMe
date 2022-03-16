@@ -10,7 +10,12 @@
 
 <body>
     <h1> RECIPES </h1>
-    
+    <% if( isLoggedIn ) {%>
+        <p>Hello</p>
+       <% } else { %>
+        <p><a href="/users/new">Click here</a> to Register an account.</p>
+        <p><a href="/users/login">Click here</a> to Login.</p>
+            <% } %>
     <% if(recipes.length===0) {%>
         <h2>There are no recipes yet!</h2>
         <a href="/recipes/new">Create one now!</a>
@@ -22,8 +27,9 @@
                         </a></li>
                     <% }) %>
             </ul>
+            <a href="/recipes/new">Create one now!</a>
             <% } %>
-                <a href="/recipes/new">Create one now!</a>
+                
 
 </body>
 
