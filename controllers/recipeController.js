@@ -9,7 +9,8 @@ const router = express.Router();
 router.get('/', async (req, res) => {
     const recipes = await Recipe.find();
     res.render('recipes/index.ejs', {
-        recipes: recipes
+        recipes: recipes,
+        username: res.locals.username
     })
 })
 

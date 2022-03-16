@@ -11,7 +11,7 @@
 <body>
     <h1> RECIPES </h1>
     <% if( isLoggedIn ) {%>
-        <p>Hello</p>
+        <p>Hello <%= username %></p>
        <% } else { %>
         <p><a href="/users/new">Click here</a> to Register an account.</p>
         <p><a href="/users/login">Click here</a> to Login.</p>
@@ -27,9 +27,13 @@
                         </a></li>
                     <% }) %>
             </ul>
-            <a href="/recipes/new">Create one now!</a>
+            <a href="/recipes/new">Create a now recipe now!</a>
             <% } %>
                 
+
+            <% if( isLoggedIn ) {%>
+                <p><a href="/users/logout">Click here</a> to logout.</p>
+                <% } %>
 
 </body>
 

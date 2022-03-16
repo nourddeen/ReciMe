@@ -15,7 +15,11 @@
         Meat: <input type="text" name="meat" value="<%=recipe.meat%>">
         Vegetables: <input type="text" name="vegetables" value="<%=recipe.vegetables%>">
         Spices: <input type="text" name="spices" value="<%=recipe.spices%>">
-        Vegan: <input type="checkbox" name="isVegan" value="<%=recipe.isVegan%>">
+        <% if (recipe.isVegan) { %>
+            Vegan: <input type="checkbox" name="isVegan" value="<%=recipe.isVegan%>" checked>
+        <% } else { %>
+            Vegan: <input type="checkbox" name="isVegan" value="<%=recipe.isVegan%>">
+        <% } %>
 
         <button type="submit">Submit</button>
     </form>
