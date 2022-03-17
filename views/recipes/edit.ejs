@@ -12,7 +12,15 @@
 <body>
     <form action="/recipes/<%=recipe._id%>?_method=PUT" method="POST">
         Name: <input type="text" name="name" value="<%=recipe.name%>" required>
-        Ingredients: <input type="text" name="ingredients" value="<%=recipe.ingredients%>">
+        Meat: <input type="text" name="meat" value="<%=recipe.meat%>">
+        Vegetables: <input type="text" name="vegetables" value="<%=recipe.vegetables%>">
+        Spices: <input type="text" name="spices" value="<%=recipe.spices%>">
+        <% if (recipe.isVegan) { %>
+            Vegan: <input type="checkbox" name="isVegan" value="<%=recipe.isVegan%>" checked>
+        <% } else { %>
+            Vegan: <input type="checkbox" name="isVegan" value="<%=recipe.isVegan%>">
+        <% } %>
+
         <button type="submit">Submit</button>
     </form>
     <a href="/recipes">Go back to the index</a>
