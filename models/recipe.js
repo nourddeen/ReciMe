@@ -6,9 +6,9 @@ const recipeSchema = new Schema({
     meat: { type: String, default: false },
     vegetables: { type: String, default: false },
     spices: { type: String, default: false },
-    img: { data: Buffer, contentType: String, default: false },
+    image: { type: String },
     user: {type: Schema.Types.ObjectId, ref: 'User'},
-    isVegan: {type: Boolean, default: false }
+    isVegan: {type: Boolean, default: false },
 }, { timestamps: true })
 
 const Recipe = mongoose.model('Recipe', recipeSchema);

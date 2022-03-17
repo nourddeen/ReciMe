@@ -11,13 +11,13 @@
  
 <body>
     <h1>RECIPE FACTORY</h1>
-    <form action="/recipes" method="POST">
+    <form action="/recipes" method="POST" enctype="multipart/form-data">
         Name: <input type="text" name="name">
         Meat: <input type="text" name="meat">
         Vegetables: <input type="text" name="vegetables">
         Spices: <input type="text" name="spices">
         Vegan dish: <input type="checkbox" name="isVegan" value=true>
-        Upload a photo: <input type="file" id="img" name="img">
+        Upload a photo: <input type="file" id="image" name="image">
         <button type="submit">Submit</button>
     </form>
 </body>

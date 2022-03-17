@@ -1,7 +1,15 @@
 const Recipe = require("../models/recipe");
 const express = require('express');
 const router = express.Router();
+const cloudinary = require("cloudinary");
+const multer = require("multer");
+const upload = multer({ dest: "./uploads/" });
 
+cloudinary.config({
+    cloud_name: process.env.CLOUD_NAME,
+    api_key: process.env.CLOUD_API_KEY,
+    api_secret: process.env.CLOUD_API_SECRET,
+  });
 
 // INDEX: GET
 // /recipes
@@ -34,17 +42,29 @@ router.get('/:id', async (req, res) => {
 // CREATE: POST
 // /recipes
 // Creates an actual recipe, then...?
-router.post('/', async (req, res) => {
-    // req.body.user = req.session.userId
-    const newRecipe = await Recipe.create(req.body);
-    try {
-        console.log(req.body)
-        console.log(newRecipe)
-        res.redirect('/recipes')
-    } catch (err) {
-        res.sendStatus(500)
-    }
-})
+router.post("/", upload.single("image"), (req, res) => {
+    cloudinary.uploader.upload(req.file.path, (res) => {
+    console.log("this is the img res\n", res.url);
+    })
+    .then((imgObj) => {
+      console.log("this is the imgObj url", imgObj.url);
+      Recipe.create({
+        name: req.body.name,
+        meat: req.body.meat,
+        vegetables: req.body.vegetables,
+        spices: req.body.spices,
+        isVegan: req.body.isVegan,
+        image: imgObj.url,
+      })
+      .then((createdRecipe) => {
+        console.log("this is the created recipe\n", createdRecipe);
+        res.redirect("/recipes");
+      });
+    })
+    .catch(err => {
+        console.log(err)
+    })
+});
 
 // EDIT: GET
 // /recipes/:id/edit
