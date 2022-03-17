@@ -33,7 +33,7 @@ router.get('/new', (req, res) => {
 // /recipes/:id
 // Shows a page displaying one recipe
 router.get('/:id', async (req, res) => {
-    const recipes = await Recipe.findById(req.params.id)
+    const recipes = await Recipe.findById(req.params.id).populate('user')
     res.render("recipes/show.ejs", {
         recipe: recipes
     })
@@ -43,6 +43,7 @@ router.get('/:id', async (req, res) => {
 // /recipes
 // Creates an actual recipe, then...?
 router.post("/", upload.single("image"), (req, res) => {
+    req.body.user = req.session.userId
     cloudinary.uploader.upload(req.file.path, (res) => {
     console.log("this is the img res\n", res.url);
     })
@@ -55,6 +56,7 @@ router.post("/", upload.single("image"), (req, res) => {
         spices: req.body.spices,
         isVegan: req.body.isVegan,
         image: imgObj.url,
+        user: req.session.userId
       })
       .then((createdRecipe) => {
         console.log("this is the created recipe\n", createdRecipe);

@@ -1,4 +1,5 @@
 const User = require("../models/users")
+const Recipe = require('../models/recipe')
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
@@ -41,10 +42,10 @@ router.get('/logout', (req, res)=>{
         res.redirect("/recipes")
     })
 })
-router.get('/', isLoggedIn,  async (req, res)=>{
+router.get('/',  async (req, res)=>{
     const users = await User.find();
     res.render('users/index.ejs', {
-        users: users
+        users: users,
     })
 })
 // NEW: GET
@@ -59,8 +60,10 @@ router.get('/new', (req, res)=>{
 // Shows a page displaying one user
 router.get('/:id', async (req, res)=>{
     const user = await User.findById(req.params.id)
+    const userRecipe = await Recipe.find({user : req.session.userId})
     res.render("users/show.ejs", {
-        user: user
+        users: user,
+        recipes : userRecipe
     })
 })
 
