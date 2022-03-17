@@ -13,6 +13,10 @@
     <h1>
         <%= recipe.name %>
     </h1>
+    <p>This recipe was shared by <%= recipe.user.username%></p>
+    <p>
+        <img src="<%= recipe.image %>">
+    </p>
     <p>
      Meat:   <%= recipe.meat %>
     </p>
@@ -25,17 +29,15 @@
     <p>
      Vegan?   <%= recipe.isVegan %>
     </p>
-    <p>
-        <img src="<%= recipe.image %>">
-    </p>
+    
 
-    <a href="/recipes/<%=recipe._id%>/edit"><button>Edit this recipe.</button></a>
+    <a href="/recipes/<%=recipe._id%>/edit"><button>Edit This Recipe</button></a>
     
     <form action="/recipes/<%= recipe._id %>?_method=DELETE" method="POST">
-        <button type="submit">Delete <%= recipe.name %>?</button>
+        <button type="submit">Delete This Recipe</button>
     </form>
 
-    <a href="/recipes">Go back to the index</a>
+    <a href="/recipes"><button>All Recipes</button></a>
 </body>
 
 </html>

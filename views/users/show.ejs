@@ -1,21 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
-    <h1> ReciMe </h1>
-    <% if( isLoggedIn ) {%>
-        <p>Hello <%= username %></p>
-       <% } else { %>
-        <p><a href="/users/new">Click here</a> to Register an account.</p>
-        <p><a href="/users/login">Click here</a> to Login.</p>
-            <% } %>
+    <h1>Hello <%= users.username %></h1>
+    <h2>these are all the recipes you shared</h2>
     <% if(recipes.length===0) {%>
         <h2>There are no recipes yet!</h2>
         <a href="/recipes/new">Create one now!</a>
@@ -31,15 +24,5 @@
                     </li>
                     <% })} %>
             </ul>
-            <% if( isLoggedIn ) {%>
-                <a href="/recipes/new"><button>Create a now recipe now! </button></a>
-            <% } %>
-                
-
-            <% if( isLoggedIn ) {%>
-                <a href="/users/logout"><button>logout</button></a>
-                <% } %>
-
 </body>
-
 </html>
