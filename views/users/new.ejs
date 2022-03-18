@@ -3,6 +3,10 @@
 <html lang="en">
 
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/app.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,13 +14,30 @@
 </head>
  
 <body>
-    <h1>Create a user</h1>
-    <form action="/users" method="POST">
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <a href="#">ReciMe</a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><a href="/users/login">Login</a></li>
+                </ul>
+            </div>
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </div>
+    </nav>
+    <h1>Create an Account</h1>
+    <form class="create-form" action="/users" method="POST">
 
         <label for ="username">Username:</label><input type="text" name="username" required>
         <label for ="password">Password:</label><input type="text" name="password" required>
 
-        <button type="submit">Create</button>
+        <button class="create-button" type="submit">Create</button>
     </form>
 </body>
 
