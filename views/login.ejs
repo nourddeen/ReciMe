@@ -11,6 +11,24 @@
     <title>Login Page</title>
 </head>
 <body>
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <a href="#">ReciMe</a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><a href="/users/new">Sign Up</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </div>
+    </nav>
     <h1>Login</h1>
     <form class="create-form" action="/users/login" method="POST">
         Name: <input type="text" name="username" required>
