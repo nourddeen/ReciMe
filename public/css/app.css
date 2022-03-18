@@ -1,3 +1,4 @@
+/* Header Titles */
 h1 {
     display: flex;
     justify-content: center;
@@ -9,12 +10,43 @@ h1 {
     font-family: 'Titan One', cursive;
     text-shadow: 5px 5px rgb(0, 141, 118);
     box-shadow: 0px 5px rgb(0, 141, 118);
+    padding-bottom: 12px;
 }
+h1.app-users-title{
+    margin-bottom: 0%;
+}
+
+ul.login-signUp{
+    font-family: 'Titan One', cursive;
+    list-style: none;
+    font-size: 15px;
+}
+a.sign-login-link{
+    justify-content: flex-start;
+    margin-left: -700px;
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+a.sign-login-link:visited{
+    color: white;
+    text-decoration: none;
+}
+a.sign-login-link:hover{
+    color: black;
+}
+
+/* user nav */
+
+
+/* body */
 body{
     margin: 0;
     background-repeat: no-repeat;
     height: 100vh;
 }
+
+/* each user name that appears on App user page */
 a.userNames{
     margin-left: 50px;
     display: flex;
@@ -32,9 +64,72 @@ a.userNames{
     box-shadow: 5px 5px rgb(0, 141, 118);
     text-shadow: 2px 2px rgb(0, 141, 118);
 }
+a.userNames:first-of-type{
+    margin-top: 100px;
+}
 
 a.userNames:hover{
    text-decoration: underline;
    background-color:rgb(0, 141, 118) ;
    
+}
+
+.user-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+    font-family: 'Titan One', cursive;
+    text-shadow: 2px 2px rgb(0, 141, 118);
+    color: black;
+    margin-top: 10px;
+}
+
+
+/* User login */
+.login-form{
+    font-family: 'Ubuntu', 'Lato', sans-serif;
+    font-weight: 400;
+    display: flex;
+    width: 500px;
+    position: relative;
+    margin: 60px auto 30px;
+    padding: 10px;
+    overflow: hidden;
+
+    background: rgba(128,198,190,255); 
+    border-radius: 0.4em;
+    border: 1px solid #191919;
+    box-shadow: 
+        inset 0 0 2px 1px rgba(255,255,255,0.08), 
+        0 16px 10px -8px rgba(0, 0, 0, 0.6);
+}
+.login-button{
+    background-color: white;
+    border-radius: 0.4em;
+}
+
+
+/* Create User/App login */
+.create-form{
+    font-family: 'Ubuntu', 'Lato', sans-serif;
+    font-weight: 400;
+    display: flex;
+    width: 500px;
+    position: relative;
+    margin: 60px auto 30px;
+    padding: 10px;
+    overflow: hidden;
+
+    background: rgba(128,198,190,255); 
+    border-radius: 0.4em;
+    border: 1px solid #191919;
+    box-shadow: 
+        inset 0 0 2px 1px rgba(255,255,255,0.08), 
+        0 16px 10px -8px rgba(0, 0, 0, 0.6);
+}
+.create-button{
+    background-color: white;
+    border-radius: 0.5em;
 }
