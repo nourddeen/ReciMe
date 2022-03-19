@@ -14,14 +14,17 @@
     <nav class="nav">
         <div class="container">
             <div class="logo">
-                <a href="#">ReciMe</a>
+                <a href="/recipes">ReciMe</a>
             </div>
             <div id="mainListDiv" class="main_list">
                 <ul class="navlinks">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <% if( isLoggedIn ) {%>
+                        <p class="recipe-welcome">Hello <%= username %></p>
+                        <u><a href="/users/logout">logout</a></u>
+                       <% } else { %>
+                        <li><a href="/users/new">Sign up</a></li>
+                        <li><a href="/users/login">Login</a></li>
+                            <% } %>
                 </ul>
             </div>
             <span class="navTrigger">
@@ -35,7 +38,6 @@
     <h2 class="shared-recipe">Here are all the recipes you shared</h2>
     <% if(recipes.length===0) {%>
         <h2>There are no recipes yet!</h2>
-        <a href="/recipes/new">Create one now!</a>
         <% } else { %>
             <ul class="recipes">
                 <% recipes.forEach((recipe)=>{ %>
@@ -48,5 +50,8 @@
                     </li>
                     <% })} %>
             </ul>
+            <% if( isLoggedIn ) {%>
+                <a href="/recipes/new"><button >Create a recipe</button></a>
+            <% } %>
 </body>
 </html>

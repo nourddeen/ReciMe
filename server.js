@@ -44,6 +44,9 @@ app.use(async (req, res, next)=>{
     next()
 })
 
+app.get('/' , (req,res)=>{
+    res.render('home.ejs')
+})
 
 app.use('/recipes', recipeController)
 app.use('/users', usersController)

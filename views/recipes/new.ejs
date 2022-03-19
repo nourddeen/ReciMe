@@ -17,14 +17,17 @@
     <nav class="nav">
         <div class="container">
             <div class="logo">
-                <a href="#">ReciMe</a>
+                <a href="/recipes">ReciMe</a>
             </div>
             <div id="mainListDiv" class="main_list">
                 <ul class="navlinks">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <% if( isLoggedIn ) {%>
+                        <p class="recipe-welcome">Hello <%= username %></p>
+                        <u><a href="/users/logout">logout</a></u>
+                       <% } else { %>
+                        <li><a href="/users/new">Sign up</a></li>
+                        <li><a href="/users/login">Login</a></li>
+                            <% } %>
                 </ul>
             </div>
             <span class="navTrigger">
@@ -36,12 +39,12 @@
     </nav>
     <h1>RECIPE FACTORY</h1>
     <form class="create-form-recipes" action="/recipes" method="POST" enctype="multipart/form-data">
-        Name: <input type="text" name="name">
-        Meat: <input type="text" name="meat">
-        Vegetables: <input type="text" name="vegetables">
-        Spices: <input type="text" name="spices">
-        Vegan dish: <input type="checkbox" name="isVegan" value=true>
-        Upload a photo: <input type="file" id="image" name="image">
+        <div class="recipe-tag">Name</div><input class="box-input" type="text" name="name">
+        <div class="recipe-tag"> Meat </div><input class="box-input"type="text" name="meat">
+       <div class="recipe-tag">Vegetables</div>  <input class="box-input" type="text" name="vegetables">
+        <div class="recipe-tag">Spices</div>  <input class="box-input" type="text" name="spices">
+      <div class="check-box-container"> <div class="recipe-tag">Vegan dish</div> <input class="checker"  type="checkbox" name="isVegan" value=true></div><input class="checkbox" type="checkbox"> 
+       <div class="upload-photo"> <div class="recipe-tag"> Upload a photo:</div><input  type="file" id="image" name="image"></div>
         <button class="recipe-create" type="submit">Submit</button>
     </form>
 </body>
