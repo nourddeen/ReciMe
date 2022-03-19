@@ -4,6 +4,7 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
 const isLoggedIn = require('../middleware/isLoggedIn')
+const alert =require('alert')
 // INDEX: GET
 // /users
 // Gives a page displaying all the users
@@ -26,10 +27,12 @@ router.post("/login", async (req, res)=>{
                 req.session.userId = possibleUser._id;
                 res.redirect("/recipes")
             }else{
+                alert('password does not match recoreds')
                 res.redirect("/users/login")
             }
         }else{
             // Let them try again?
+            alert('User name does not exist')
             res.redirect("/users/login")
         }
     }catch(err){
@@ -71,12 +74,24 @@ router.get('/:id', async (req, res)=>{
 // /users
 // Creates an actual user, then...?
 router.post('/', async (req, res)=>{
-    // req.body.password needs to be HASHED
-    console.log(req.body)
-    const hashedPassword = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10))
-    req.body.password = hashedPassword
-    const newUser = await User.create(req.body);
-    res.redirect('/users')
+    try{
+        // req.body.password needs to be HASHED
+        console.log(req.body)
+        const hashedPassword = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10))
+        req.body.password = hashedPassword
+        const newUser = await User.create(req.body);
+        const user = await User.findOne({ username: req.body.username })
+        console.log("user\n", user)
+        if (user) {
+            req.session.isLoggedIn = true;
+            req.session.userId = user._id;
+            res.redirect('/recipes')
+        }
+    }catch(err) {
+        console.log(err)
+        alert('sorry this user name is already used. \n please try a different one')
+        res.redirect('/users/new')
+    }
 })
 
 // EDIT: GET

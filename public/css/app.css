@@ -1,529 +1,689 @@
 /* Header Titles */
 img {
-    height: 500px;
-    width: 500px;
-    border-radius: 100px;
+  height: 500px;
+  width: 500px;
+  border-radius: 100px;
 }
-.recipe{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 50px
+.recipe {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 50px;
 }
-ul{
-    list-style-type: none;
+ul {
+  list-style-type: none;
 }
 h1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(128,198,190,255);
-    margin-top: 0;
-    color: white;
-    font-size: 80px;
-    font-family: 'Titan One', cursive;
-    text-shadow: 5px 5px rgb(0, 141, 118);
-    box-shadow: 0px 5px rgb(0, 141, 118);
-    padding-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(128, 198, 190, 255);
+  margin-top: 0;
+  color: white;
+  font-size: 80px;
+  font-family: "Titan One", cursive;
+  text-shadow: 5px 5px rgb(0, 141, 118);
+  box-shadow: 0px 5px rgb(0, 141, 118);
+  padding-bottom: 12px;
 }
-h1.app-users-title{
-    margin-bottom: 0%;
+h1.app-users-title {
+  margin-bottom: 0%;
 }
 
-ul.login-signUp{
-    font-family: 'Titan One', cursive;
-    list-style: none;
-    font-size: 15px;
+ul.login-signUp {
+  font-family: "Titan One", cursive;
+  list-style: none;
+  font-size: 15px;
 }
-a.sign-login-link{
-    justify-content: flex-start;
-    margin-left: -700px;
-    color: white;
-    text-decoration: none;
-    font-size: 25px;
+a.sign-login-link {
+  justify-content: flex-start;
+  margin-left: -700px;
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
 }
-a.sign-login-link:visited{
-    color: white;
-    text-decoration: none;
+a.sign-login-link:visited {
+  color: white;
+  text-decoration: none;
 }
-a.sign-login-link:hover{
-    color: black;
+a.sign-login-link:hover {
+  color: black;
 }
-.recipe-welcome{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0;
-    color: black;
-    font-size: 20px;
-    font-family: 'Titan One', cursive;
-    text-shadow: 5px 5px rgb(0, 141, 118);
-    padding-bottom: 12px;
+.recipe-welcome {
+  display: flex;
+  margin-top: 0;
+  color: black;
+  font-size: 20px;
+  font-family: "Titan One", cursive;
+  text-shadow: 5px 5px rgb(0, 141, 118);
+  padding-bottom: 12px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 30px;
 }
 
 /* user nav */
 
 .nav {
-    width: 100%;
-    height: 65px;
-    position: fixed;
-    line-height: 65px;
-    text-align: center;
+  width: 100%;
+  height: 65px;
+  position: fixed;
+  line-height: 65px;
+  text-align: center;
 }
 
 .nav div.logo {
-    float: left;
-    width: auto;
-    height: auto;
-    padding-left: 3rem;
+  float: left;
+  width: auto;
+  height: auto;
+  padding-left: 3rem;
 }
 
 .nav div.logo a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 2.5rem;
-    font-family: 'Titan One', cursive;
+  text-decoration: none;
+  color: #fff;
+  font-size: 2.5rem;
+  font-family: "Titan One", cursive;
 }
 
 .nav div.logo a:hover {
-    color: black;
+  color: black;
 }
 
 .nav div.main_list {
-    height: 65px;
-    float: right;
+  height: 65px;
+  float: right;
 }
 
 .nav div.main_list ul {
-    width: 100%;
-    height: 65px;
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  width: 100%;
+  height: 65px;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav div.main_list ul li {
-    width: auto;
-    height: 65px;
-    padding: 0;
-    padding-right: 3rem;
+  width: auto;
+  height: 65px;
+  padding: 0;
+  padding-right: 3rem;
 }
 
 .nav div.main_list ul li a {
-    text-decoration: none;
-    color: #fff;
-    line-height: 65px;
-    font-size: 2.4rem;
+  text-decoration: none;
+  color: #fff;
+  line-height: 65px;
+  font-size: 2.4rem;
 }
 
 .nav div.main_list ul li a:hover {
-    color: black;
+  color: black;
 }
-
 
 /* Home section */
 
 .home {
-    width: 100%;
-    height: 100vh;
-    background-image: url(https://images.unsplash.com/photo-1498550744921-75f79806b8a7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b0f6908fa5e81286213c7211276e6b3d&auto=format&fit=crop&w=1500&q=80);
-    background-position: center top;
-	background-size:cover;
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://images.unsplash.com/photo-1498550744921-75f79806b8a7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b0f6908fa5e81286213c7211276e6b3d&auto=format&fit=crop&w=1500&q=80);
+  background-position: center top;
+  background-size: cover;
 }
 
 .navTrigger {
-    display: none;
+  display: none;
 }
 
 .nav {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
-
 .navTrigger {
-    cursor: pointer;
-    width: 30px;
-    height: 25px;
-    margin: auto;
-    position: absolute;
-    right: 30px;
-    top: 0;
-    bottom: 0;
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  margin: auto;
+  position: absolute;
+  right: 30px;
+  top: 0;
+  bottom: 0;
 }
 
 .navTrigger i {
-    background-color: #fff;
-    border-radius: 2px;
-    content: '';
-    display: block;
-    width: 100%;
-    height: 4px;
+  background-color: #fff;
+  border-radius: 2px;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
 }
 
 .navTrigger i:nth-child(1) {
-    -webkit-animation: outT 0.8s backwards;
-    animation: outT 0.8s backwards;
-    -webkit-animation-direction: reverse;
-    animation-direction: reverse;
+  -webkit-animation: outT 0.8s backwards;
+  animation: outT 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
 }
 
 .navTrigger i:nth-child(2) {
-    margin: 5px 0;
-    -webkit-animation: outM 0.8s backwards;
-    animation: outM 0.8s backwards;
-    -webkit-animation-direction: reverse;
-    animation-direction: reverse;
+  margin: 5px 0;
+  -webkit-animation: outM 0.8s backwards;
+  animation: outM 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
 }
 
 .navTrigger i:nth-child(3) {
-    -webkit-animation: outBtm 0.8s backwards;
-    animation: outBtm 0.8s backwards;
-    -webkit-animation-direction: reverse;
-    animation-direction: reverse;
+  -webkit-animation: outBtm 0.8s backwards;
+  animation: outBtm 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
 }
 
 .navTrigger.active i:nth-child(1) {
-    -webkit-animation: inT 0.8s forwards;
-    animation: inT 0.8s forwards;
+  -webkit-animation: inT 0.8s forwards;
+  animation: inT 0.8s forwards;
 }
 
 .navTrigger.active i:nth-child(2) {
-    -webkit-animation: inM 0.8s forwards;
-    animation: inM 0.8s forwards;
+  -webkit-animation: inM 0.8s forwards;
+  animation: inM 0.8s forwards;
 }
 
 .navTrigger.active i:nth-child(3) {
-    -webkit-animation: inBtm 0.8s forwards;
-    animation: inBtm 0.8s forwards;
+  -webkit-animation: inBtm 0.8s forwards;
+  animation: inBtm 0.8s forwards;
 }
 
 @-webkit-keyframes inM {
-    50% {
-        -webkit-transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(45deg);
-    }
+  50% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+  }
 }
 
 @keyframes inM {
-    50% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(45deg);
-    }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
 }
 
 @-webkit-keyframes outM {
-    50% {
-        -webkit-transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(45deg);
-    }
+  50% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+  }
 }
 
 @keyframes outM {
-    50% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(45deg);
-    }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
 }
 
 @-webkit-keyframes inT {
-    0% {
-        -webkit-transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        -webkit-transform: translateY(9px) rotate(0deg);
-    }
-    100% {
-        -webkit-transform: translateY(9px) rotate(135deg);
-    }
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(9px) rotate(135deg);
+  }
 }
 
 @keyframes inT {
-    0% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(9px) rotate(0deg);
-    }
-    100% {
-        transform: translateY(9px) rotate(135deg);
-    }
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(9px) rotate(135deg);
+  }
 }
 
 @-webkit-keyframes outT {
-    0% {
-        -webkit-transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        -webkit-transform: translateY(9px) rotate(0deg);
-    }
-    100% {
-        -webkit-transform: translateY(9px) rotate(135deg);
-    }
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(9px) rotate(135deg);
+  }
 }
 
 @keyframes outT {
-    0% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(9px) rotate(0deg);
-    }
-    100% {
-        transform: translateY(9px) rotate(135deg);
-    }
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(9px) rotate(135deg);
+  }
 }
 
 @-webkit-keyframes inBtm {
-    0% {
-        -webkit-transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        -webkit-transform: translateY(-9px) rotate(0deg);
-    }
-    100% {
-        -webkit-transform: translateY(-9px) rotate(135deg);
-    }
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-9px) rotate(135deg);
+  }
 }
 
 @keyframes inBtm {
-    0% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-9px) rotate(0deg);
-    }
-    100% {
-        transform: translateY(-9px) rotate(135deg);
-    }
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-9px) rotate(135deg);
+  }
 }
 
 @-webkit-keyframes outBtm {
-    0% {
-        -webkit-transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        -webkit-transform: translateY(-9px) rotate(0deg);
-    }
-    100% {
-        -webkit-transform: translateY(-9px) rotate(135deg);
-    }
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-9px) rotate(135deg);
+  }
 }
 
 @keyframes outBtm {
-    0% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-9px) rotate(0deg);
-    }
-    100% {
-        transform: translateY(-9px) rotate(135deg);
-    }
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-9px) rotate(135deg);
+  }
 }
 
 .affix {
-    padding: 0;
-    background-color: #111;
+  padding: 0;
+  background-color: #111;
 }
-
-
-
-
-
 
 .myH2 {
-	text-align:center;
-	font-size: 4rem;
+  text-align: center;
+  font-size: 4rem;
 }
 .myP {
-	text-align: justify;
-	padding-left:15%;
-	padding-right:15%;
-	font-size: 20px;
+  text-align: justify;
+  padding-left: 15%;
+  padding-right: 15%;
+  font-size: 20px;
 }
-@media all and (max-width:700px){
-	.myP {
-		padding:2%;
-	}
+@media all and (max-width: 700px) {
+  .myP {
+    padding: 2%;
+  }
 }
-
 
 /* body */
-body{
-    margin: 0;
-    background-repeat: no-repeat;
-    height: 100vh;
+body {
+  margin: 0;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
 /* each user name that appears on App user page */
-a.userNames{
-    margin-left: 50px;
-    display: flex;
-    justify-content: space-around;
-    background-color: rgba(128,198,190,255);
-    color: white;
-    text-decoration: none;
-    margin-top: 10px; 
-    margin-bottom: 10px;
-    font-size: 30px;
-    max-width:max-content;
-    border-radius: 5px;
-    padding: 4px;
-    font-family: 'Titan One', cursive;
-    box-shadow: 5px 5px rgb(0, 141, 118);
-    text-shadow: 2px 2px rgb(0, 141, 118);
+a.userNames {
+  margin-left: 50px;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(128, 198, 190, 255);
+  color: white;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 30px;
+  max-width: max-content;
+  border-radius: 5px;
+  padding: 4px;
+  font-family: "Titan One", cursive;
+  box-shadow: 5px 5px rgb(0, 141, 118);
+  text-shadow: 2px 2px rgb(0, 141, 118);
 }
-a.userNames:first-of-type{
-    margin-top: 100px;
-}
-
-a.userNames:hover{
-   text-decoration: underline;
-   background-color:rgb(0, 141, 118) ;
-   
+a.userNames:first-of-type {
+  margin-top: 100px;
 }
 
-.user-name{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    color: white;
-    font-family: 'Titan One', cursive;
-    text-shadow: 2px 2px rgb(0, 141, 118);
-    color: black;
-    margin-top: 10px;
+a.userNames:hover {
+  text-decoration: underline;
+  background-color: rgb(0, 141, 118);
 }
 
+.user-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: white;
+  font-family: "Titan One", cursive;
+  text-shadow: 2px 2px rgb(0, 141, 118);
+  color: black;
+  margin-top: 10px;
+}
 
 /* User login */
-.login-form{
-    font-family: 'Ubuntu', 'Lato', sans-serif;
-    font-weight: 400;
-    display: flex;
-    width: 500px;
-    position: relative;
-    margin: 60px auto 30px;
-    padding: 10px;
-    overflow: hidden;
+.login-form {
+  font-family: "Ubuntu", "Lato", sans-serif;
+  font-weight: 400;
+  display: flex;
+  width: 500px;
+  position: relative;
+  margin: 60px auto 30px;
+  padding: 10px;
+  overflow: hidden;
 
-    background: rgba(128,198,190,255); 
-    border-radius: 0.4em;
-    border: 1px solid #191919;
-    box-shadow: 
-        inset 0 0 2px 1px rgba(255,255,255,0.08), 
-        0 16px 10px -8px rgba(0, 0, 0, 0.6);
+  background: rgba(128, 198, 190, 255);
+  border-radius: 0.4em;
+  border: 1px solid #191919;
+  box-shadow: inset 0 0 2px 1px rgba(255, 255, 255, 0.08),
+    0 16px 10px -8px rgba(0, 0, 0, 0.6);
 }
-.login-button{
-    background-color: white;
-    border-radius: 0.4em;
+.login-button {
+  background-color: white;
+  border-radius: 0.4em;
 }
-
 
 /* Create User/App login */
-.create-form{
-    font-family: 'Ubuntu', 'Lato', sans-serif;
-    font-weight: 400;
+.create-form {
+  font-family: "Ubuntu", "Lato", sans-serif;
+  font-weight: 400;
+  display: flex;
+  width: 510px;
+  position: relative;
+  margin: 60px auto 30px;
+  padding: 10px;
+  overflow: hidden;
+  background: rgba(128, 198, 190, 255);
+  border-radius: 0.4em;
+  border: 1px solid #191919;
+  box-shadow: inset 0 0 2px 1px rgba(255, 255, 255, 0.08),
+    0 16px 10px -8px rgba(0, 0, 0, 0.6);
+}
+.create-form-recipes {
+  font-family: "Ubuntu", "Lato", sans-serif;
+  font-weight: 400;
+  display: flex;
+  position: relative;
+  margin: 60px auto 30px;
+  padding: 10px;
+  overflow: hidden;
+  background: rgba(128, 198, 190, 255);
+  border-radius: 0.4em;
+  border: 1px solid #191919;
+  box-shadow: inset 0 0 2px 1px rgb(255 255 255 / 8%),
+    0 16px 10px -8px rgb(0 0 0 / 60%);
+  gap: 1rem;
+  flex-direction: column;
+  width: 20%;
+}
+.create-button {
+  height: 1vh;
+  background-color: white;
+  border-radius: 0.5em;
+}
+.recipe-create {
+  border-radius: 30px;
+  font-size: 25px;
+  margin-right: 0vh;
+}
+.recipe-name {
+  font-family: "Titan One", cursive;
+  list-style: none;
+  text-decoration: none;
+}
+ul.recipes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10%;
+
+}
+.index-buttons {
     display: flex;
-    width: 510px;
-    position: relative;
-    margin: 60px auto 30px;
-    padding: 10px;
-    overflow: hidden;
-    background: rgba(128,198,190,255); 
-    border-radius: 0.4em;
-    border: 1px solid #191919;
-    box-shadow: 
-        inset 0 0 2px 1px rgba(255,255,255,0.08), 
-        0 16px 10px -8px rgba(0, 0, 0, 0.6);
-}
-.create-form-recipes{
-    font-family: 'Ubuntu', 'Lato', sans-serif;
-    font-weight: 400;
-    display: flex;
-    width: 65%;
-    position: relative;
-    margin: 60px auto 30px;
-    padding: 10px;
-    overflow: hidden;
-    background: rgba(128,198,190,255); 
-    border-radius: 0.4em;
-    border: 1px solid #191919;
-    box-shadow: 
-        inset 0 0 2px 1px rgba(255,255,255,0.08), 
-        0 16px 10px -8px rgba(0, 0, 0, 0.6);
-}
-.create-button{
-    background-color: white;
-    border-radius: 0.5em;
-}
-.recipe-create{
-    border-radius: 5px;
-    font-size: 20px;
-}
-.recipe-name{
-    font-family: 'Titan One', cursive;
-    list-style: none;
-    text-decoration: none;
-}
-ul.recipes{
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
-}
-.recipe-button-1{
-    display: flex;
-    background-color: white;
-    border-radius: 0.5em;
-    margin-left: 930px;
-    width:100px;
-    margin-bottom: 10px;
-}
-.recipe-button-2{
-    display: flex;
     background-color: white;
     border-radius: 0.5em;
     margin-left: 50%;
     margin-right: 50%;
+    gap: 10px;
 }
-h2.shared-recipe{
+.recipe-button-1 {
+    display: flex;
+    background-color: white;
+    border-radius: 0.5em;
+    margin-left: -25%;
+    width: 100px;
+    margin-bottom: 10px;
+}
+.recipe-button-2 {
+    display: flex;
+    background-color: white;
+    border-radius: 0.5em;
+    margin-left: -40%;
+    
+}
+h2.shared-recipe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Titan One", cursive;
+}
+h1.recipe-name {
+  text-decoration: none;
+  list-style-type: none;
+}
+ul.recipes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20%;
+  justify-content: center;
+  text-shadow: 5px 5px rgb(0, 141, 118);
+  z-index: -1;
+}
+div.recipe-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+h2 {
+  font-family: "Titan One", cursive;
+  text-shadow: 2px 2px rgb(0, 141, 118);
+}
+.box-input {
+  height: 43%;
+  margin-top: -4%;
+}
+div.checkbox-container {
+  display: flex;
+  flex-direction: row;
+}
+.checkbox {
+  display: flex;
+  margin-left: -28px;
+  margin-top: 20px;
+  margin-right: 4rem;
+  margin-bottom: -11%;
+}
+.upload-photo {
+  display: flex;
+  margin-right: 0rem;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.recipe-tag {
+  color: white;
+  font-family: "Titan One", cursive;
+  outline-color: black;
+  font-size: 19px;
+  color: black;
+  font-size: 34px;
+  -webkit-text-stroke: 1px black;
+  -webkit-text-fill-color: white;
+}
+.checker {
+  margin-left: 3rem;
+  width: 20px;
+  height: 20px;
+}
+img.shared-recipes{
+    display: flex;
+   margin-left: 50%;
+   
+}
+.food-attr{
+    display: flex;
+}
+
+
+/* ///////////// */
+@media screen and (min-width: 260px) {
+  h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Titan One', cursive;
-}
-h1.recipe-name{
-    text-decoration: none;
-    list-style-type: none;
-
-}
-ul.recipes{
-    display: flex;
-   flex-wrap: wrap;
-    gap: 20%;
-    justify-content: center;
+    background-color: rgba(128, 198, 190, 255);
+    margin-top: 0;
+    color: white;
+    font-size: 30px;
+    font-family: "Titan One", cursive;
     text-shadow: 5px 5px rgb(0, 141, 118);
-    
+    box-shadow: 0px 5px rgb(0, 141, 118);
+    padding-bottom: 12px;
+  }
+  .recipe-welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    margin-right: 45px;
+    color: black;
+    font-size: 75%;
+    font-family: "Titan One", cursive;
+    text-shadow: 5px 5px rgb(0, 141, 118);
+    padding-bottom: 12px;
+  }
+
+  .nav div.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    font-family: "Titan One", cursive;
+  }
+
+  .nav div.logo a:hover {
+    color: black;
+  }
 }
-div.recipe-div{
+
+@media screen and (min-width: 480px) {
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(128, 198, 190, 255);
+    margin-top: 0;
+    color: white;
+    font-size: 80px;
+    font-family: "Titan One", cursive;
+    text-shadow: 5px 5px rgb(0, 141, 118);
+    box-shadow: 0px 5px rgb(0, 141, 118);
+    padding-bottom: 12px;
+  }
+  .recipe-welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    margin-right: 45px;
+    color: black;
+    font-size: 20px;
+    font-family: "Titan One", cursive;
+    text-shadow: 5px 5px rgb(0, 141, 118);
+    padding-bottom: 12px;
+  }
+
+  .nav div.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2.5rem;
+    font-family: "Titan One", cursive;
+  }
+
+  .nav div.logo a:hover {
+    color: black;
+  }
+}
+.about-div{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-family: "Titan One", cursive;
+    font-size: 22px;
+
 }
-h2{
-    font-family: 'Titan One', cursive;
-    text-shadow: 2px 2px rgb(0, 141, 118);
+.enter-button{
+    background-color: rgba(128, 198, 190, 255);
+    font-family: "Titan One", cursive;
+    font-size: 33px;
+    border-radius: 10px;
+    color: white;
+    text-shadow: 1px 2px rgb(0 141 118);
+    padding: 10px;
+}
+.enter-button:hover{
+    color:rgb(70, 70, 70);
+    background-color: darkgreen;
+}
+.about-h2{
+    color: rgba(128, 198, 190, 255);
+    font-size: 57px;
+    margin-top: 0px;
+}
+h1{
+    position: fixed;
+    width: 100%;
+    margin-top: -1%;
+    
 }

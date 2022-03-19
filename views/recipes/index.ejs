@@ -20,10 +20,13 @@
             </div>
             <div id="mainListDiv" class="main_list">
                 <ul class="navlinks">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="/users/login">Login</a></li>
-                    <li><a href="/users/new">Sign Up</a></li>
+                    <% if( isLoggedIn ) {%>
+                        <p class="recipe-welcome">Hello <%= username %></p>
+                        <li><a href="/users/logout">logout</a></li>
+                       <% } else { %>
+                        <li><a href="/users/new">Sign up</a></li>
+                        <li><a href="/users/login">Login</a></li>
+                            <% } %>
                 </ul>
             </div>
             <span class="navTrigger">
@@ -34,10 +37,6 @@
         </div>
     </nav>
     <h1> ReciMe </h1>
-    <% if( isLoggedIn ) {%>
-        <p class="recipe-welcome">Hello <%= username %></p>
-       <% } %>
-
     <% if(recipes.length===0) {%>
         <h2>There are no recipes yet!</h2>
         <a href="/recipes/new">Create one now!</a>
@@ -53,15 +52,16 @@
                     </li>
                     <% })} %>
             </ul>
+            <div class="index-buttons">
             <% if( isLoggedIn ) {%>
-                <a href="/recipes/new"><button class="recipe-button-1">Create a now recipe now! </button></a>
+                <a href="/recipes/new"><button class="recipe-button-1">Create a recipe now!</button></a>
             <% } %>
                 
 
             <% if( isLoggedIn ) {%>
                 <a href="/users/logout"><button class="recipe-button-2">logout</button></a>
                 <% } %>
-
+            </div>
 </body>
 
 </html>
