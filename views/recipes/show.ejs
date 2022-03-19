@@ -23,6 +23,7 @@
                 <ul class="navlinks">
                     <% if( isLoggedIn ) {%>
                         <p class="recipe-welcome">Hello <%= username %></p>
+                        <u><a href="/users/logout">logout</a></u>
                        <% } else { %>
                         <li><a href="/users/new">Sign up</a></li>
                         <li><a href="/users/login">Login</a></li>
