@@ -22,7 +22,7 @@
                 <ul class="navlinks">
                     <% if( isLoggedIn ) {%>
                         <p class="recipe-welcome">Hello <%= username %></p>
-                        <li><a href="/users/logout">logout</a></li>
+                        <u class="logout-button"><a class="logout-button" href="/users/logout">logout</a></u>
                        <% } else { %>
                         <li><a href="/users/new">Sign up</a></li>
                         <li><a href="/users/login">Login</a></li>
@@ -38,8 +38,7 @@
     </nav>
     <h1> ReciMe </h1>
     <% if(recipes.length===0) {%>
-        <h2>There are no recipes yet!</h2>
-        <a href="/recipes/new">Create one now!</a>
+        <h2 class="no-recipes">There are no recipes yet!</h2>
         <% } else { %>
             <ul class="recipes">
                 <% recipes.forEach((recipe)=>{ %>

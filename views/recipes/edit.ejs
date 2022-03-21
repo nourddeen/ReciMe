@@ -36,7 +36,7 @@
             </span>
         </div>
     </nav>
-    <form action="/recipes/<%=recipe._id%>?_method=PUT" method="POST">
+    <form class="create-form-recipes" action="/recipes/<%=recipe._id%>?_method=PUT" method="POST">
         Name: <input type="text" name="name" value="<%=recipe.name%>" required>
         Meat: <input type="text" name="meat" value="<%=recipe.meat%>">
         Vegetables: <input type="text" name="vegetables" value="<%=recipe.vegetables%>">
@@ -49,7 +49,7 @@
 
         <button type="submit">Submit</button>
     </form>
-    <a href="/recipes">Go back to the index</a>
+    <a class="go-back-button" href="/recipes">Go back to the index</a>
 </body>
 
 </html>

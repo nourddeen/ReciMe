@@ -23,7 +23,7 @@
                 <ul class="navlinks">
                     <% if( isLoggedIn ) {%>
                         <p class="recipe-welcome">Hello <%= username %></p>
-                        <u><a href="/users/logout">logout</a></u>
+                        <u class="logout-button"><a class="logout-button" href="/users/logout">logout</a></u>
                        <% } else { %>
                         <li><a href="/users/new">Sign up</a></li>
                         <li><a href="/users/login">Login</a></li>
@@ -40,7 +40,6 @@
     <h1>
         <%= recipe.name %>
     </h1>
-    <p>This recipe was shared by <%= recipe.user %></p>
     <p>
         <img class="shared-recipes" src="<%= recipe.image %>">
     </p>
@@ -56,15 +55,14 @@
     <p class="food-attr">
      Vegan:   <%= recipe.isVegan %>
     </p>
-    
-
-    <a href="/recipes/<%=recipe._id%>/edit"><button>Edit This Recipe</button></a>
+   
+    <a href="/recipes/<%=recipe._id%>/edit"><button class="edit-recipe">Edit This Recipe</button></a>
     
     <form action="/recipes/<%= recipe._id %>?_method=DELETE" method="POST">
-        <button type="submit">Delete This Recipe</button>
+        <button class="delete-recipe" type="submit">Delete This Recipe</button>
     </form>
 
-    <a href="/recipes"><button>All Recipes</button></a>
+    <a href="/recipes"><button class="all-recipes">All Recipes</button></a>
 </body>
 
 </html>
