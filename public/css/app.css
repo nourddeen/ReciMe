@@ -3,6 +3,7 @@ img {
   height: 500px;
   width: 500px;
   border-radius: 100px;
+  box-shadow: 10px 10px rgb(0, 141, 118);
 }
 .recipe {
   display: flex;
@@ -16,15 +17,13 @@ ul {
 h1 {
   display: flex;
   justify-content: center;
-  align-items: center;
   background-color: rgba(128, 198, 190, 255);
-  margin-top: 0;
   color: white;
   font-size: 80px;
   font-family: "Titan One", cursive;
   text-shadow: 5px 5px rgb(0, 141, 118);
-  box-shadow: 0px 5px rgb(0, 141, 118);
-  padding-bottom: 12px;
+  margin-top: -100px;
+  
 }
 h1.app-users-title {
   margin-bottom: 0%;
@@ -51,15 +50,14 @@ a.sign-login-link:hover {
 }
 .recipe-welcome {
   display: flex;
-  margin-top: 0;
-  color: black;
-  font-size: 20px;
-  font-family: "Titan One", cursive;
-  text-shadow: 5px 5px rgb(0, 141, 118);
-  padding-bottom: 12px;
-  justify-content: center;
-  align-items: flex-start;
-  margin-top: 30px;
+    color: black;
+    font-size: 30px;
+    font-family: "Titan One", cursive;
+    text-shadow: 5px 5px rgb(0 141 118);
+    padding-bottom: 12px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 34px;
 }
 
 /* user nav */
@@ -67,9 +65,10 @@ a.sign-login-link:hover {
 .nav {
   width: 100%;
   height: 65px;
-  position: fixed;
   line-height: 65px;
   text-align: center;
+  margin-top: 0;
+  box-shadow: 0px 7px rgb(0 141 118);
 }
 
 .nav div.logo {
@@ -77,6 +76,7 @@ a.sign-login-link:hover {
   width: auto;
   height: auto;
   padding-left: 3rem;
+  text-shadow: 5px 5px rgb(0 141 118);
 }
 
 .nav div.logo a {
@@ -106,16 +106,17 @@ a.sign-login-link:hover {
 
 .nav div.main_list ul li {
   width: auto;
-  height: 65px;
-  padding: 0;
   padding-right: 3rem;
+  margin-top: 38px;
+  margin-left: 34px;
 }
 
 .nav div.main_list ul li a {
   text-decoration: none;
   color: #fff;
   line-height: 65px;
-  font-size: 2.4rem;
+  font-size: 1.4rem;
+  font-family: "Titan One", cursive;
 }
 
 .nav div.main_list ul li a:hover {
@@ -141,6 +142,7 @@ a.sign-login-link:hover {
   padding-bottom: 20px;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
+  background-color: rgba(128, 198, 190, 255);
 }
 
 .navTrigger {
@@ -423,10 +425,9 @@ a.userNames:hover {
 
 /* Create User/App login */
 .create-form {
-  font-family: "Ubuntu", "Lato", sans-serif;
+  font-family: "Titan One", cursive;
   font-weight: 400;
   display: flex;
-  width: 510px;
   position: relative;
   margin: 60px auto 30px;
   padding: 10px;
@@ -436,9 +437,10 @@ a.userNames:hover {
   border: 1px solid #191919;
   box-shadow: inset 0 0 2px 1px rgba(255, 255, 255, 0.08),
     0 16px 10px -8px rgba(0, 0, 0, 0.6);
+    width: fit-content;
 }
 .create-form-recipes {
-  font-family: "Ubuntu", "Lato", sans-serif;
+  font-family: "Titan One", cursive;
   font-weight: 400;
   display: flex;
   position: relative;
@@ -453,11 +455,13 @@ a.userNames:hover {
   gap: 1rem;
   flex-direction: column;
   width: 20%;
+  
 }
 .create-button {
-  height: 1vh;
+  height: 21px;
   background-color: white;
   border-radius: 0.5em;
+  font-family: "Titan One", cursive;
 }
 .recipe-create {
   border-radius: 30px;
@@ -488,19 +492,27 @@ ul.recipes {
     gap: 10px;
 }
 .recipe-button-1 {
-    display: flex;
-    background-color: white;
-    border-radius: 0.5em;
-    margin-left: -25%;
-    width: 100px;
-    margin-bottom: 10px;
+  display: flex;
+  border-radius: 0.5em;
+  margin-left: -50%;
+  margin-bottom: 10px;
+  font-family: "Titan One", cursive;
+  background-color: rgba(128, 198, 190, 255);
+  color: white;
+  width: fit-content;
+  font-size: 24px;
 }
 .recipe-button-2 {
-    display: flex;
-    background-color: white;
-    border-radius: 0.5em;
-    margin-left: -40%;
-    
+  display: flex;
+  border-radius: 0.5em;
+  margin-left: -25%;
+  margin-bottom: 10px;
+  font-family: "Titan One", cursive;
+  background-color: rgba(128, 198, 190, 255);
+  color: white;
+  width: fit-content;
+  font-size: 24px;
+  margin-bottom: 20%;
 }
 h2.shared-recipe {
   display: flex;
@@ -519,6 +531,7 @@ ul.recipes {
   justify-content: center;
   text-shadow: 5px 5px rgb(0, 141, 118);
   z-index: -1;
+  padding-bottom: 10%;
 }
 div.recipe-div {
   display: flex;
@@ -568,7 +581,8 @@ div.checkbox-container {
 }
 img.shared-recipes{
     display: flex;
-   margin-left: 50%;
+    flex-wrap: wrap;
+   margin-left: 37%;
    
 }
 .food-attr{
@@ -576,84 +590,6 @@ img.shared-recipes{
 }
 
 
-/* ///////////// */
-@media screen and (min-width: 260px) {
-  h1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(128, 198, 190, 255);
-    margin-top: 0;
-    color: white;
-    font-size: 30px;
-    font-family: "Titan One", cursive;
-    text-shadow: 5px 5px rgb(0, 141, 118);
-    box-shadow: 0px 5px rgb(0, 141, 118);
-    padding-bottom: 12px;
-  }
-  .recipe-welcome {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0;
-    margin-right: 45px;
-    color: black;
-    font-size: 75%;
-    font-family: "Titan One", cursive;
-    text-shadow: 5px 5px rgb(0, 141, 118);
-    padding-bottom: 12px;
-  }
-
-  .nav div.logo a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 15px;
-    font-family: "Titan One", cursive;
-  }
-
-  .nav div.logo a:hover {
-    color: black;
-  }
-}
-
-@media screen and (min-width: 480px) {
-  h1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(128, 198, 190, 255);
-    margin-top: 0;
-    color: white;
-    font-size: 80px;
-    font-family: "Titan One", cursive;
-    text-shadow: 5px 5px rgb(0, 141, 118);
-    box-shadow: 0px 5px rgb(0, 141, 118);
-    padding-bottom: 12px;
-  }
-  .recipe-welcome {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0;
-    margin-right: 45px;
-    color: black;
-    font-size: 20px;
-    font-family: "Titan One", cursive;
-    text-shadow: 5px 5px rgb(0, 141, 118);
-    padding-bottom: 12px;
-  }
-
-  .nav div.logo a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 2.5rem;
-    font-family: "Titan One", cursive;
-  }
-
-  .nav div.logo a:hover {
-    color: black;
-  }
-}
 .about-div{
     display: flex;
     justify-content: center;
@@ -681,9 +617,79 @@ img.shared-recipes{
     font-size: 57px;
     margin-top: 0px;
 }
-h1{
-    position: fixed;
-    width: 100%;
-    margin-top: -1%;
-    
+.logout-button{
+  font-family: "Titan One", cursive;
+  color: white;
+  list-style: none;
+  font-size: 20px;
+  padding-right: 24px;
+  margin-top: 40px;
+  margin-left: 16px;
+  text-decoration: none;
+  text-shadow: 1px 2px rgb(0 141 118);
+}
+.shared-by{
+  display: flex;
+  font-family: "Titan One", cursive;
+  justify-content: center;
+  align-items: center;
+ 
+}
+p.food-attr{
+  display: flex;
+  font-family: "Titan One", cursive;
+  justify-content: center;
+  align-items: center;
+}
+.edit-recipe{
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 47.5%;
+  background-color: rgba(128, 198, 190, 255);
+  font-family: "Titan One", cursive;
+  margin-bottom: 5px;
+}
+.delete-recipe{
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 47%;
+  background-color: rgba(128, 198, 190, 255);
+  font-family: "Titan One", cursive;
+  margin-top: 5px;
+}
+.all-recipes{
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 48%;
+  background-color: rgba(128, 198, 190, 255);
+  font-family: "Titan One", cursive;
+  margin-top: 5px;
+}
+a{
+  list-style: none;
+  text-decoration: none;
+}
+.go-back-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: "Titan One", cursive;
+  color: #111;
+}
+.go-back-button:hover{
+  color: rgba(128, 198, 190, 255);
+  text-shadow: 1px 2px rgb(0 141 118);
+  font-size: 110%;
+}
+.no-recipes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
